@@ -18,63 +18,85 @@
       <div class="col-sm-4">
         <div class="panel panel-default">
           <div class="panel-body">
-            <div class="panel_title">Student's information</div>
+            <div class="panel_title">Personal information</div>
             <form class="form-horizontal">
-               <div class="form-group">
-                <img id="picture" src="img/profile.png" width="68" style="padding: 5px;">
+              <div class="form-group">
+                  <div class="col-sm-4"></div>
+                  <img id="picture" src="img/profile.jpg" width="100" style="padding: 5px;">
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Name:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">Kavin Sermsaksakoon</p>
+                  <!--<p class="form-control-static">Kavin Sermsaksakoon</p>-->
+                  <select class="form-control" name="namePrefix">
+                    <option value="">Select Prefix</option>
+                    <option value="mr">Mr.</option>
+                    <option value="miss">Miss</option>
+                  </select>
+                  <input type="text" class="form-control" name="firstName" placeholder="First name">
+                  <input type="text" class="form-control" name="lastName" placeholder="Last name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-4">Name in Thai:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="firstNameTH" placeholder="ชื่อ">
+                  <input type="text" class="form-control" name="lastNameTH" placeholder="นามสกุล">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Nationality:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">Thai</p>
+                  <!--<p class="form-control-static">Thai</p>-->
+                  <input type="text" class="form-control" name="nationality" placeholder="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Date of birth:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">14/4/1997</p>
+                  <!--<p class="form-control-static">14/4/1997</p>-->
+                  <input type="date" class="form-control" name="birthDate" placeholder="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Age:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">20</p>
+                  <!--<p class="form-control-static">20</p>-->
+                  <!--should get from birthDate.value()-->
+                  <input type="number" class="form-control" name="age" placeholder="">
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-4">School year:</label>
+                <label class="control-label col-sm-4">Study year:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">3</p>
+                  <!--<p class="form-control-static">3</p>-->
+                  <input type="number" min="1" max="5" class="form-control" name="studyYear" placeholder="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Program:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">ICE</p>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-sm-4">Age:</label>
-                <div class="col-sm-8">
-                  <p class="form-control-static">20</p>
+                  <!--<p class="form-control-static">ICE</p>-->
+                  <select class="form-control" name="namePrefix">
+                    <option value="">Select Program</option>
+                    <option value="nano">NANO</option>
+                    <option value="adme">ADME</option>
+                    <option value="ice">ICE</option>
+                    <option value="aero">AERO</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">Student ID number:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">5831205621</p>
+                  <!--<p class="form-control-static">5831205621</p>-->
+                  <input type="number" class="form-control" name="studentID" placeholder="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-4">GPAX:</label>
                 <div class="col-sm-8">
-                  <p class="form-control-static">3.15</p>
+                  <input type="number" class="form-control" name="gpax" placeholder="">
                 </div>
               </div>
               <div class="form-group">
@@ -100,30 +122,17 @@
         </div>
       </div>
       <div class="col-sm-8  ">
-        <div class="panel_title">Language competency</div>
+        <div class="panel_title">English competency</div>
         <div class="panel panel-default">
           <div class="panel-body">
             <form class="form-inline">
               <div class="form-group">
-                <label for="language">Language 1:</label>
-                <input type="text" class="form-control" id="language1">
-              </div> 
-              <div class="form-group">
-                <label >Level:</label>
-                <div class="radio-toolbar" style="margin-bottom: 0px;">
-                <input type="radio" id="lv1_4" name="level1" value="4">
-                <label for="lv1_4">Excellent</label>
-                <input type="radio" id="lv1_3" name="level1" value="3">
-                <label for="lv1_3">Good</label>
-                <input type="radio" id="lv1_2" name="level1" value="2">
-                <label for="lv1_2">Fair</label>
-                <input type="radio" id="lv1_1" name="level1" value="1">
-                <label for="lv1_1">Poor</label>
-                </div>
-              </div> 
-              <div class="form-group">
-                <label >Test taken:</label>
-                 <input type="text" class="form-control" id="test1" placeholder="eg. IELTS">
+                <label >Laguage test:</label>
+                    <select class="form-control" name="testTaken">
+                    <option value="">Select</option>
+                    <option value="ielts">IELTS</option>
+                    <option value="toefl">TOEFL iBT</option>
+                  </select>
               </div>
               <div class="form-group" >
                 <label for="score1">Test score:</label>
@@ -132,111 +141,6 @@
               <div class="form-group">
                 <label for="date1">Date taken:</label>
                 <input type="month" class="form-control" id="date1">
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="language">Language 2:</label>
-                <input type="text" class="form-control" id="language2">
-              </div> 
-              <div class="form-group">
-                <label >Level:</label>
-                <div class="radio-toolbar" style="margin-bottom: 0px;">
-                <input type="radio" id="lv2_4" name="level2" value="4">
-                <label for="lv1_4">Excellent</label>
-                <input type="radio" id="lv2_3" name="level2" value="3">
-                <label for="lv1_3">Good</label>
-                <input type="radio" id="lv2_2" name="level2" value="2">
-                <label for="lv1_2">Fair</label>
-                <input type="radio" id="lv2_1" name="level2" value="1">
-                <label for="lv1_1">Poor</label>
-                </div>
-              </div> 
-              <div class="form-group">
-                <label >Test taken:</label>
-                 <input type="text" class="form-control" id="test2" placeholder="eg. IELTS">
-              </div>
-              <div class="form-group" >
-                <label for="score1">Test score:</label>
-                <input type="number" class="form-control" id="score2" placeholder="eg. 6.5">
-              </div>
-              <div class="form-group">
-                <label for="date1">Date taken:</label>
-                <input type="month" class="form-control" id="date2">
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="language">Language 3:</label>
-                <input type="text" class="form-control" id="language3">
-              </div> 
-              <div class="form-group">
-                <label >Level:</label>
-                <div class="radio-toolbar" style="margin-bottom: 0px;">
-                <input type="radio" id="lv3_4" name="level3" value="4">
-                <label for="lv1_4">Excellent</label>
-                <input type="radio" id="lv3_3" name="level3" value="3">
-                <label for="lv1_3">Good</label>
-                <input type="radio" id="lv3_2" name="level3" value="2">
-                <label for="lv1_2">Fair</label>
-                <input type="radio" id="lv3_1" name="level3" value="1">
-                <label for="lv1_1">Poor</label>
-                </div>
-              </div> 
-              <div class="form-group">
-                <label >Test taken:</label>
-                 <input type="text" class="form-control" id="test3" placeholder="eg. IELTS">
-              </div>
-              <div class="form-group" >
-                <label for="score1">Test score:</label>
-                <input type="number" class="form-control" id="score3" placeholder="eg. 6.5">
-              </div>
-              <div class="form-group">
-                <label for="date1">Date taken:</label>
-                <input type="month" class="form-control" id="date3">
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="language">Language 4:</label>
-                <input type="text" class="form-control" id="language4">
-              </div> 
-              <div class="form-group">
-                <label >Level:</label>
-                <div class="radio-toolbar" style="margin-bottom: 0px;">
-                <input type="radio" id="lv4_4" name="level4" value="4">
-                <label for="lv1_4">Excellent</label>
-                <input type="radio" id="lv4_3" name="level4" value="3">
-                <label for="lv1_3">Good</label>
-                <input type="radio" id="lv4_2" name="level4" value="2">
-                <label for="lv1_2">Fair</label>
-                <input type="radio" id="lv4_1" name="level4" value="1">
-                <label for="lv1_1">Poor</label>
-                </div>
-              </div> 
-              <div class="form-group">
-                <label >Test taken:</label>
-                 <input type="text" class="form-control" id="test4" placeholder="eg. IELTS">
-              </div>
-              <div class="form-group" >
-                <label for="score1">Test score:</label>
-                <input type="number" class="form-control" id="score4" placeholder="eg. 6.5">
-              </div>
-              <div class="form-group">
-                <label for="date1">Date taken:</label>
-                <input type="month" class="form-control" id="date4">
               </div>
             </form>
           </div>

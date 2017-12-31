@@ -1,5 +1,5 @@
 <?php
-require 'session.php';
+require 'resources/session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
